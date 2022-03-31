@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
 
         GameObject car = Instantiate(carPrefab, spawnPos, Quaternion.identity);
 
+        car.GetComponent<SpriteRenderer>().color = new Color
+            (Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+
         int dirModifier = 1;
         if (index > 2)
         {
