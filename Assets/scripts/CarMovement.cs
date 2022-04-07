@@ -14,7 +14,16 @@ public class CarMovement : MonoBehaviour
         transform.Translate(xValue, 0, 0);
         
 
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
+        //== means to set on if statements it should always be ==
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }

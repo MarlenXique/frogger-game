@@ -11,17 +11,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SpawnCar();
+        InvokeRepeating("SpawnCar", 1, 2);
+        //spawn cars starting at x, every y
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnCar();
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SpawnCar();
 
-        }
+        //}
     }
 
     void SpawnCar()
