@@ -41,18 +41,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Car")
         {
             Destroy(gameObject);
-            Debug.Log("GAME OVER:Press SPACE to restart");
+            Debug.Log("GAME OVER: Press SPACE to restart");
            
         }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Triggered");
+        //Debug.Log("Triggered");
 
         if (collision.gameObject.tag == "Goal")
         {
-            Debug.Log("Area Cleared");
+            Debug.Log("Area Cleared: Press SPACE to restart");
         }
 
     }
