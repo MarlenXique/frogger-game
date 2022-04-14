@@ -35,12 +35,27 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
 
         //== means to set on if statements it should always be ==
         if (collision.gameObject.tag == "Car")
         {
             Destroy(gameObject);
+            Debug.Log("GAME OVER");
         }
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Triggered");
+
+        if (collision.gameObject.tag == "Goal")
+        {
+            Debug.Log("Area Cleared");
+        }
+
+    }
+
+
+
 }
