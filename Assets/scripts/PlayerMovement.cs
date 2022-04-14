@@ -41,7 +41,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Car")
         {
             Destroy(gameObject);
-            Debug.Log("GAME OVER");
+            Debug.Log("GAME OVER:Press SPACE to restart");
+           
         }
 
     }
