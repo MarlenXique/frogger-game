@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnCar", 1, 2);
+        InvokeRepeating("SpawnCar", 1, 1);
         //spawn cars starting at x, every y
     }
 
@@ -21,11 +21,11 @@ public class GameManager : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Press SPACE to restart");
-            SceneManager.LoadScene("frogger-game");
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+
+        //    SceneManager.LoadScene("frogger-game");
+        //}
     }
 
 
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         if (index > 2)
         {
             dirModifier = -1;
+            car.GetComponent<SpriteRenderer>().flipX = true;
         }
 
 
